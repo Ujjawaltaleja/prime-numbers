@@ -1,0 +1,26 @@
+//simply we are going to use the approach that the numbers that are divisble by prime numbers are not prime and the others are prime.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n,i,arr[100000],size=0,j,temp;           // array is for storing prime numbers
+	scanf("%d",&n);        // we will be finding prime numbers between 2 to n (both inclusive) 
+	arr[0]=2;              // we know that 2 is a prime number
+	size++;                // we got 1 prime number so size of array gets incremented  
+	for(i=3;i<=n;i++)
+	{
+		temp=pow(i,0.5);       //squat root of the number (for which we are going to check is it prime or not)
+		for(j=0;arr[j]<=temp;j++){
+			if(i%arr[j]==0)
+			break;
+		}
+		if(arr[j]>temp)
+		{
+			arr[size]=i;
+			size++;
+		}
+	}
+	for(i=0;i<size;i++)
+	printf("%d \n",arr[i]);
+	return 0;
+}
