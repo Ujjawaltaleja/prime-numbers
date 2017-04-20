@@ -9,7 +9,7 @@ int main()
 	size++;                // we got 1 prime number so size of array gets incremented  
 	for(i=3;i<=n;i++)
 	{
-		temp=pow(i,0.5);       //squat root of the number (for which we are going to check is it prime or not)
+		temp=pow(i,0.5);       //square root of the number (for which we are going to check is it prime or not)
 		for(j=0;arr[j]<=temp;j++){
 			if(i%arr[j]==0)
 			break;
